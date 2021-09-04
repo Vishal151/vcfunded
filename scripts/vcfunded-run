@@ -1,2 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+from vcfunded.lib import get_recent_funded, get_by_category
+
+print(get_recent_funded())
+print(get_by_category())
