@@ -12,9 +12,9 @@ categories = ['Femtech', 'Enterprise', 'Energy', 'Industrial', 'Logistics', 'Agr
 
 def get_recent_funded():
     url = 'https://vc-funded-api.herokuapp.com/funded'
-    response = requests.get(url).json()[random.randint(1,25)]
+    response = requests.get(url).json()[random.randint(0,24)]
 
-    return f"""{response['company_name']}' in the {response['company_category']} sector 
+    return f"""{response['company_name']} in the {response['company_category']} sector 
         \n> Raised ${response['raise_amount_mill_dollars']}m on {response['raise_date']} 
         \n> Check them out at: {response['company_website']} 
         """
